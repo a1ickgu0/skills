@@ -1,0 +1,587 @@
+{
+  "metadata": {
+    "source": "Teece, D.J. (1986) 'Profiting from Technological Innovation', Research Policy 15, 285-305",
+    "version": "1.0",
+    "usage_rules": [
+      "独占性制度：统一使用'独占性'（强/弱），不使用'专有性''占有性'",
+      "互补资产三分类：通用型 / 专用型 / 共用型，不使用'共专用''共同专有'",
+      "共用型而非共专用：强调双向依赖关系（bilateral dependence），避免'共专用'的歧义",
+      "三阶段模型：前范式阶段 → 范式阶段 → 后续阶段（组织内显式化命名）",
+      "整合 vs 契约：整合=通过所有权控制；契约=通过合同关系获取；不使用'一体化'",
+      "创新者定义：特指率先将新产品/工艺商业化的企业（first to commercialize），非仅发明者"
+    ]
+  },
+  "terms": {
+    "core_concepts": [
+      {
+        "id": "pfi",
+        "en": "Profiting from Technological Innovation",
+        "zh": "从技术创新中获利",
+        "alt_zh": ["技术创收"],
+        "note": "论文标题"
+      },
+      {
+        "id": "appropriability_regime",
+        "en": "Regime of Appropriability",
+        "zh": "独占性制度",
+        "alt_zh": ["专有性体制", "占有性机制", "独占性机制"],
+        "note": "'制度'强调外部环境制度属性，非企业内部能力"
+      },
+      {
+        "id": "tight_appropriability",
+        "en": "Tight Appropriability Regime",
+        "zh": "强独占性",
+        "alt_zh": ["紧独占性", "强专有性"],
+        "note": "技术难模仿 + 法律保护有效"
+      },
+      {
+        "id": "weak_appropriability",
+        "en": "Weak Appropriability Regime",
+        "zh": "弱独占性",
+        "alt_zh": ["弱专有性", "松独占性"],
+        "note": "技术透明 + 法律保护薄弱；论文指出弱独占性是常态"
+      },
+      {
+        "id": "complementary_assets",
+        "en": "Complementary Assets",
+        "zh": "互补资产",
+        "alt_zh": ["互补性资产", "辅助资产"],
+        "note": "论文最核心概念"
+      },
+      {
+        "id": "generic_assets",
+        "en": "Generic Assets",
+        "zh": "通用资产/通用型资产",
+        "alt_zh": ["一般性资产", "通用型互补资产"],
+        "note": "无需为创新量身定制，市场随处可获"
+      },
+      {
+        "id": "specialized_assets",
+        "en": "Specialized Assets",
+        "zh": "专用资产/专用型资产",
+        "alt_zh": ["专业化资产", "特有资产"],
+        "note": "创新与资产间存在单向依赖"
+      },
+      {
+        "id": "cospecialized_assets",
+        "en": "Cospecialized Assets",
+        "zh": "共用型资产/共用/双向专用资产",
+        "alt_zh": ["共专用资产", "共同专有资产", "互专用资产"],
+        "note": "创新与资产间存在双向依赖；利润关键所在"
+      },
+      {
+        "id": "dominant_design",
+        "en": "Dominant Design",
+        "zh": "主导设计",
+        "alt_zh": ["主导设计范式", "优势设计"],
+        "note": "行业技术标准的确立"
+      },
+      {
+        "id": "dominant_design_paradigm",
+        "en": "Dominant Design Paradigm",
+        "zh": "主导设计范式",
+        "alt_zh": [],
+        "note": "含前范式与范式两个阶段"
+      }
+    ],
+    "industry_evolution_stages": [
+      {
+        "id": "preparadigmatic",
+        "en": "Preparadigmatic Phase",
+        "zh": "前范式阶段",
+        "alt_zh": ["前范式期", "范式前阶段"],
+        "note": "设计流动，路线多样，互补资产不显重要"
+      },
+      {
+        "id": "paradigmatic",
+        "en": "Paradigmatic Phase",
+        "zh": "范式阶段",
+        "alt_zh": ["范式期"],
+        "note": "主导设计出现，竞争转向价格/规模/学习曲线"
+      },
+      {
+        "id": "post_paradigmatic",
+        "en": "(Not explicitly named in paper)",
+        "zh": "后续阶段",
+        "alt_zh": ["成熟期", "后范式成熟阶段"],
+        "note": "组织内显式化：产品定型、生产高度自动化、微创新为主"
+      }
+    ],
+    "knowledge_technology_nature": [
+      {
+        "id": "tacit_knowledge",
+        "en": "Tacit Knowledge",
+        "zh": "隐性知识",
+        "alt_zh": ["隐含知识", "默会知识"],
+        "note": "难以言传，不易被复制，有利于独占性"
+      },
+      {
+        "id": "codified_knowledge",
+        "en": "Codified Knowledge",
+        "zh": "显性知识",
+        "alt_zh": ["编码化知识", "明言知识"],
+        "note": "易传输、易复制，不利于独占性"
+      },
+      {
+        "id": "product_innovation",
+        "en": "Product Innovation",
+        "zh": "产品创新",
+        "alt_zh": [],
+        "note": "区别于工艺创新"
+      },
+      {
+        "id": "process_innovation",
+        "en": "Process Innovation",
+        "zh": "工艺创新",
+        "alt_zh": ["流程创新", "过程创新"],
+        "note": "主导设计确立后成为主流创新形式"
+      }
+    ],
+    "legal_protection": [
+      {
+        "id": "patents",
+        "en": "Patents",
+        "zh": "专利",
+        "alt_zh": [],
+        "note": "论文强调：实际保护远不如理论，可被'发明绕过'"
+      },
+      {
+        "id": "trade_secrets",
+        "en": "Trade Secrets",
+        "zh": "商业机密/商业秘密",
+        "alt_zh": ["营业秘密"],
+        "note": "仅当产品公开后仍能保密时才有效"
+      },
+      {
+        "id": "copyrights",
+        "en": "Copyrights",
+        "zh": "版权",
+        "alt_zh": ["著作权"],
+        "note": "论文中提及但非重点"
+      },
+      {
+        "id": "intellectual_property",
+        "en": "Intellectual Property (IP)",
+        "zh": "知识产权",
+        "alt_zh": [],
+        "note": "泛称"
+      }
+    ],
+    "strategy_governance": [
+      {
+        "id": "integration_mode",
+        "en": "Integration (Mode)",
+        "zh": "整合模式",
+        "alt_zh": ["一体化模式", "内部化模式"],
+        "note": "通过所有权控制互补资产"
+      },
+      {
+        "id": "contractual_mode",
+        "en": "Contractual (Mode)",
+        "zh": "契约模式",
+        "alt_zh": ["合约模式", "合同模式"],
+        "note": "通过合同关系获取互补资产"
+      },
+      {
+        "id": "mixed_modes",
+        "en": "Mixed Modes",
+        "zh": "混合模式",
+        "alt_zh": [],
+        "note": "整合与契约的混合使用，常为过渡阶段"
+      },
+      {
+        "id": "strategic_partnering",
+        "en": "Strategic Partnering",
+        "zh": "战略结盟",
+        "alt_zh": ["战略合作"],
+        "note": "契约模式的流行称谓，但论文警示其风险"
+      },
+      {
+        "id": "licensing",
+        "en": "Licensing",
+        "zh": "技术授权/授权",
+        "alt_zh": ["许可", "许可经营"],
+        "note": "契约模式的一种具体形式"
+      },
+      {
+        "id": "forward_integration",
+        "en": "Forward Integration",
+        "zh": "前向整合",
+        "alt_zh": ["前向一体化"],
+        "note": "向下游（分销/营销）扩展"
+      },
+      {
+        "id": "backward_integration",
+        "en": "Backward Integration",
+        "zh": "后向整合",
+        "alt_zh": ["后向一体化"],
+        "note": "向上游（制造/供应）扩展"
+      },
+      {
+        "id": "lateral_integration",
+        "en": "Lateral Integration",
+        "zh": "横向整合",
+        "alt_zh": ["横向一体化"],
+        "note": "向相关业务扩展"
+      },
+      {
+        "id": "internalize",
+        "en": "Internalize",
+        "zh": "内部化",
+        "alt_zh": ["内化", "纳入企业边界"],
+        "note": "将互补资产纳入企业边界之内"
+      }
+    ],
+    "analytical_constructs": [
+      {
+        "id": "imitation",
+        "en": "Imitation",
+        "zh": "模仿",
+        "alt_zh": ["仿制", "复制"],
+        "note": "弱独占性下的核心威胁"
+      },
+      {
+        "id": "imitators_followers",
+        "en": "Imitators / Followers",
+        "zh": "模仿者/跟随者",
+        "alt_zh": ["仿制者", "追随者"],
+        "note": "未必简单复制，可能改进设计"
+      },
+      {
+        "id": "innovator",
+        "en": "Innovator",
+        "zh": "创新者",
+        "alt_zh": [],
+        "note": "特指率先将新产品/工艺商业化的企业"
+      },
+      {
+        "id": "reverse_engineering",
+        "en": "Reverse Engineering",
+        "zh": "逆向工程",
+        "alt_zh": ["反向工程", "逆向分析"],
+        "note": "弱独占性下模仿者获取技术的手段"
+      },
+      {
+        "id": "first_to_market",
+        "en": "First-to-Market Advantage",
+        "zh": "先发优势",
+        "alt_zh": ["首发优势", "率先上市优势"],
+        "note": "论文核心问题：先发优势为何常常不成立"
+      },
+      {
+        "id": "irreversible_investment",
+        "en": "Irreversibility / Irreversible Investment",
+        "zh": "不可逆投资",
+        "alt_zh": ["沉没投资", "专用性投资"],
+        "note": "契约模式下双方面临的核心风险"
+      },
+      {
+        "id": "bottleneck",
+        "en": "Bottleneck",
+        "zh": "瓶颈",
+        "alt_zh": ["瓶颈资源", "卡脖子资源"],
+        "note": "固定供应的互补资产，持有者占据优势"
+      },
+      {
+        "id": "spillover",
+        "en": "Spillover (Benefits)",
+        "zh": "溢出效应/溢出利润",
+        "alt_zh": ["外溢效应", "外溢利润"],
+        "note": "创新带来的正外部性，可能流向互补资产所有者"
+      },
+      {
+        "id": "competitive_manufacturing",
+        "en": "Competitive Manufacturing",
+        "zh": "竞争性制造能力",
+        "alt_zh": ["有竞争力的制造"],
+        "note": "关键互补资产之一"
+      },
+      {
+        "id": "after_sales_support",
+        "en": "After-Sales Support / Service",
+        "zh": "售后服务",
+        "alt_zh": ["售后支持"],
+        "note": "关键互补资产之一"
+      }
+    ],
+    "decision_framework": [
+      {
+        "id": "integration_vs_contract",
+        "en": "Integration versus Contract Decision",
+        "zh": "整合vs契约决策",
+        "alt_zh": ["一体化vs合约决策"],
+        "note": "核心战略决策"
+      },
+      {
+        "id": "integration_calculus",
+        "en": "Integration Calculus",
+        "zh": "整合计算/整合权衡",
+        "alt_zh": ["整合算计"],
+        "note": "考虑时间、资金约束与资产重要性"
+      },
+      {
+        "id": "time_to_position",
+        "en": "Time Required to Position (Relative to Competitors)",
+        "zh": "占位所需时间（相对于竞争者）",
+        "alt_zh": ["布局时效"],
+        "note": "整合计算的纵轴维度"
+      },
+      {
+        "id": "criticality_to_success",
+        "en": "How Critical to Success?",
+        "zh": "对成功的关键性",
+        "alt_zh": ["成功关键度"],
+        "note": "整合计算的横轴维度"
+      },
+      {
+        "id": "cash_constrained",
+        "en": "Cash Constrained",
+        "zh": "现金约束/受限于现金",
+        "alt_zh": ["资金受限"],
+        "note": "整合时的现实约束"
+      },
+      {
+        "id": "minority_position",
+        "en": "Minority Position",
+        "zh": "少数股权",
+        "alt_zh": ["小股比", "少数股份"],
+        "note": "现金约束下的折中方案"
+      }
+    ],
+    "extended_topics": [
+      {
+        "id": "rd_allocation",
+        "en": "R&D Resource Allocation",
+        "zh": "R&D资源配置/研发资源配置",
+        "alt_zh": ["研发投资决策"],
+        "note": "应投向与现有互补资产匹配的方向"
+      },
+      {
+        "id": "industry_structure",
+        "en": "Industry Structure",
+        "zh": "产业结构",
+        "alt_zh": ["行业结构"],
+        "note": "受独占性制度影响"
+      },
+      {
+        "id": "industry_maturity",
+        "en": "Industry Maturity",
+        "zh": "产业成熟度",
+        "alt_zh": ["行业成熟度"],
+        "note": "成熟产业中互补资产被寡头整合→进入壁垒"
+      },
+      {
+        "id": "entry_barriers",
+        "en": "New Entry / Barriers to Entry",
+        "zh": "新进入者/进入壁垒",
+        "alt_zh": ["新进入壁垒"],
+        "note": "产业成熟后，核心共用型资产被瓜分完毕"
+      },
+      {
+        "id": "manufacturing_competence",
+        "en": "Manufacturing Competence / Capability",
+        "zh": "制造能力",
+        "alt_zh": ["制造竞争力"],
+        "note": "弱独占性下是留住创新利润的关键互补资产"
+      },
+      {
+        "id": "international_competitiveness",
+        "en": "International Competitiveness",
+        "zh": "国际竞争力",
+        "alt_zh": [],
+        "note": "制造能力对国家创新利润归属的影响"
+      },
+      {
+        "id": "trade_investment_barriers",
+        "en": "Trade and Investment Barriers",
+        "zh": "贸易和投资壁垒",
+        "alt_zh": ["贸易投资壁垒"],
+        "note": "东道国可控制互补资产截取利润"
+      },
+      {
+        "id": "profit_distribution",
+        "en": "Distribution of Profits from Innovation",
+        "zh": "创新利润分配",
+        "alt_zh": ["创新利润分布"],
+        "note": "论文核心问题"
+      },
+      {
+        "id": "hollow_corporation",
+        "en": "Hollow Corporation",
+        "zh": "空心公司",
+        "alt_zh": ["空壳公司"],
+        "note": "Business Week 术语：缺乏制造能力的公司"
+      },
+      {
+        "id": "dynamic_networks",
+        "en": "Dynamic Networks",
+        "zh": "动态网络",
+        "alt_zh": ["动态网络组织"],
+        "note": "Miles & Snow 术语；论文警示可能反映制造能力退化"
+      },
+      {
+        "id": "market_for_knowhow",
+        "en": "Market for Know-How",
+        "zh": "技术诀窍市场",
+        "alt_zh": ["知识市场", "技术市场"],
+        "note": "弱独占性下交易困难（定价难、绩效难评估）"
+      }
+    ],
+    "key_judgments": [
+      {
+        "id": "markets_dont_work",
+        "en": "Markets don't work well",
+        "zh": "市场失灵",
+        "note": "弱独占性 + 模仿容易时"
+      },
+      {
+        "id": "profits_to_asset_owners",
+        "en": "Profits accrue to owners of complementary assets",
+        "zh": "利润流向互补资产所有者",
+        "note": "而非知识产权开发者"
+      },
+      {
+        "id": "expand_boundaries",
+        "en": "The innovator may find it prudent to expand its boundaries",
+        "zh": "创新者应主动扩张企业边界",
+        "note": "进入专用/共用型资产"
+      },
+      {
+        "id": "closely_coupled",
+        "en": "Closely coupled to the market",
+        "zh": "紧密耦合市场",
+        "note": "前范式阶段的生存策略"
+      },
+      {
+        "id": "parallel_prototyping",
+        "en": "Multiple parallel and sequential prototyping",
+        "zh": "多路径并行与序贯原型",
+        "note": "前范式阶段的优势策略，但成本高昂"
+      },
+      {
+        "id": "own_before_dominant_design",
+        "en": "If the innovator cannot own specialized complementary assets before dominant design emerges, profits will be divided",
+        "zh": "如果创新者不能在主导设计形成前拥有专用互补资产，创新利润就会被瓜分",
+        "note": "组织内提炼的核心判断"
+      },
+      {
+        "id": "designer_role_unviable",
+        "en": "The notion that a nation can adopt a 'designer role' is unlikely to be viable",
+        "zh": "'设计者角色'不可持续",
+        "note": "必须参与制造才能留住利润"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "emi_cat",
+      "en": "EMI CAT Scanner",
+      "zh": "EMI CAT扫描仪",
+      "framework_position": "技术卓越 + 弱独占性 + 无互补资产 → 创新者失败",
+      "appropriability": "weak",
+      "complementary_assets": "none (needed: marketing, service, manufacturing)",
+      "dominant_design_stage": "paradigmatic",
+      "innovator_outcome": "lose",
+      "winner": "GE / Technicare (imitators with complementary assets)"
+    },
+    {
+      "id": "ibm_pc",
+      "en": "IBM Personal Computer",
+      "zh": "IBM PC",
+      "framework_position": "技术平庸 + 弱独占性 + 强互补资产（品牌+开放生态） → 创新者大胜",
+      "appropriability": "weak",
+      "complementary_assets": "strong (brand=reputation, open architecture=induced cospecialized assets)",
+      "dominant_design_stage": "paradigmatic",
+      "innovator_outcome": "win",
+      "winner": "IBM (innovator with dominant complementary assets)"
+    },
+    {
+      "id": "nutrasweet",
+      "en": "G.D. Searle / NutraSweet",
+      "zh": "NutraSweet（纽特甜）",
+      "framework_position": "强独占性 + 前向整合制造+品牌 → 创新者持续获利",
+      "appropriability": "tight",
+      "complementary_assets": "built (manufacturing, brand, trade secrets)",
+      "dominant_design_stage": "paradigmatic",
+      "innovator_outcome": "win",
+      "winner": "Searle (innovator with tight appropriability + strategic asset building)"
+    },
+    {
+      "id": "rc_cola",
+      "en": "RC Cola",
+      "zh": "RC Cola（可乐罐装/健怡可乐首创者）",
+      "framework_position": "先发创新 + 弱独占性 + 无互补资产 → 被可口可乐/百事碾压",
+      "appropriability": "weak",
+      "complementary_assets": "none",
+      "dominant_design_stage": "paradigmatic",
+      "innovator_outcome": "lose",
+      "winner": "Coca-Cola / Pepsi (imitators with distribution/brand)"
+    },
+    {
+      "id": "bowmar",
+      "en": "Bowmar / Pocket Calculator",
+      "zh": "Bowmar（袖珍计算器）",
+      "framework_position": "先发创新 + 弱独占性 → 被TI/HP淘汰",
+      "appropriability": "weak",
+      "complementary_assets": "none",
+      "dominant_design_stage": "paradigmatic",
+      "innovator_outcome": "lose",
+      "winner": "Texas Instruments / HP"
+    },
+    {
+      "id": "xerox",
+      "en": "Xerox / Office Computer",
+      "zh": "施乐（办公电脑）",
+      "framework_position": "核心技术（鼠标/图标）被Apple成功商业化",
+      "appropriability": "weak",
+      "complementary_assets": "lacked relevant complementary assets for PC market",
+      "dominant_design_stage": "paradigmatic",
+      "innovator_outcome": "lose",
+      "winner": "Apple (leveraged Xerox's innovations with better complementary assets)"
+    },
+    {
+      "id": "de_havilland",
+      "en": "de Havilland Comet",
+      "zh": "彗星客机",
+      "framework_position": "前范式阶段选错设计 + 不可逆投入 → 丧失地位",
+      "appropriability": "weak",
+      "complementary_assets": "sunk irreversibly into wrong design",
+      "dominant_design_stage": "preparadigmatic",
+      "innovator_outcome": "lose",
+      "winner": "Boeing (correctly identified dominant design)"
+    },
+    {
+      "id": "apple_laserwriter",
+      "en": "Apple LaserWriter / Canon",
+      "zh": "Apple LaserWriter + 佳能",
+      "framework_position": "契约模式案例：苹果承担财务风险换取佳能合作",
+      "appropriability": "mixed",
+      "complementary_assets": "accessed via contract (Canon subsystems)",
+      "dominant_design_stage": "paradigmatic",
+      "innovator_outcome": "win (with risk sharing)",
+      "winner": "Apple (with contractual partner Canon)"
+    },
+    {
+      "id": "ibm_microsoft",
+      "en": "IBM + Microsoft (DOS)",
+      "zh": "IBM + 微软（DOS）",
+      "framework_position": "契约模式案例：IBM品牌赋予微软'即时信誉'",
+      "appropriability": "weak",
+      "complementary_assets": "IBM's brand credibility = cospecialized asset for Microsoft",
+      "dominant_design_stage": "paradigmatic",
+      "innovator_outcome": "both benefit",
+      "winner": "IBM (short-term) / Microsoft (long-term)"
+    },
+    {
+      "id": "union_carbide",
+      "en": "Union Carbide / Petrochemicals",
+      "zh": "联合碳化物（石化）",
+      "framework_position": "强独占性 + 通用互补资产 → 契约/授权模式可行",
+      "appropriability": "tight",
+      "complementary_assets": "generic (widely available manufacturing)",
+      "dominant_design_stage": "paradigmatic",
+      "innovator_outcome": "win",
+      "winner": "Innovator (licensing model works under tight appropriability)"
+    }
+  ]
+}
