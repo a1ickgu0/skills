@@ -44,9 +44,9 @@ Pass the validated transcript, transcription manifest, any optional OCR/backgrou
 
 ## Domain overlay (optional)
 
-**SUB-SKILL:** Use domain-analyzer with a profile from `profiles/`
+**SUB-SKILL:** Use domain-analyzer with a profile from `domain-analyzer/profiles/`
 
-Apply a vendor/event-specific research lens on top of the generic analysis. Select the appropriate profile (e.g., `profiles/hpe-discover-networking.yaml`) and delegate to `domain-analyzer`. Skip this stage with `--skip-domain` when only generic analysis is needed.
+Apply a vendor/event-specific research lens on top of the generic analysis. Select the appropriate profile (e.g., `domain-analyzer/profiles/hpe-discover-networking.yaml`) and delegate to `domain-analyzer`. Skip this stage with `--skip-domain` when only generic analysis is needed.
 
 ## Final gate
 

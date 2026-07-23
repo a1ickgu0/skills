@@ -1,0 +1,81 @@
+# Generic Test domain profile
+# Minimal profile for testing the domain-analyzer generic framework.
+
+meta:
+  skill_name: "domain-analyzer-generic-test"
+  display_name: "Generic Test Event"
+  event_name: "Generic Test"
+  vendor: "TestCorp"
+
+corpus:
+  item_id_pattern: "T(?:0[1-9]|[12][0-9]|3[0-0])"
+  item_count: 30
+  task1_dir: "content/01_items"
+  tracks_dir: "content/02_tracks"
+  analysis_dir: "content/03_analysis"
+  output_dir_pattern: "content/05_analysis/{item_id}-{slug}"
+
+tracks:
+  - "Cloud infrastructure"
+  - "Edge computing"
+  - "AI and analytics"
+
+sections:
+  - "结论先行"
+  - "视频范围与证据口径"
+  - "全片时间轴"
+  - "三条研究主线覆盖"
+  - "技术与产品机制"
+  - "产品与可用性矩阵"
+  - "客户案例台账"
+  - "与网页层的增量差异"
+  - "矛盾与不确定性问题"
+  - "方法与来源"
+
+availability_vocabulary:
+  - "available-now"
+  - "public-preview"
+  - "roadmap"
+
+delta_statuses:
+  - "confirmed"
+  - "expanded"
+  - "contradicted"
+
+evidence_labels:
+  - "speech-only"
+  - "slide-only"
+  - "demo"
+  - "customer-claim"
+  - "analysis-inference"
+  - "uncertain"
+
+mandatory_extensions:
+  - "technical and product mechanisms"
+  - "product/availability matrix"
+  - "customer cases"
+  - "explicit delta from task1 page layer"
+  - "unanswered questions"
+
+template:
+  frontmatter:
+    item_id: "TXX"
+    analysis_layer: "task2-video"
+    task1_file: "content/01_items/txx-slug.md"
+    official_source_url: ""
+    analysis_coverage: "full-video"
+    transcript_file: "transcript.md"
+    transcription_manifest_file: "transcription-manifest.json"
+    analysis_manifest_file: "analysis-manifest.json"
+
+terminology:
+  brands:
+    - "TestCorp Cloud Platform"
+    - "TestCorp Edge Suite"
+  naming_rules:
+    - "Preserve official capitalization"
+
+additional_rules:
+  - "Separate what the speaker says from official cross-checks and analyst inference"
+  - "Keep customer production claims separate from demonstrations"
+  - "Treat roadmap statements as future-looking"

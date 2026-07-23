@@ -98,6 +98,21 @@ def validate(directory: Path) -> list[str]:
         for key in ("device", "cpu_workers", "model", "review_model", "chunks", "realtime_factor"):
             if key not in manifest:
                 errors.append(f"manifest missing runtime field: {key}")
+        manifest_required = (
+            "provider_name", "architecture", "input_sha256", "duration_seconds",
+            "gpu_workers", "chunk_seconds", "overlap_seconds", "cache_hits",
+            "new_chunks", "transcription_elapsed_seconds", "peak_memory_bytes",
+            "coverage_start_seconds", "coverage_end_seconds",
+        )
+        for key in manifest_required:
+            if key not in manifest:
+                errors.append(f"manifest missing required field: {key}")
+        device = manifest.get("device")
+        if device not in ("metal", "cuda", "cpu", None):
+            errors.append(f"manifest device must be metal, cuda, or cpu; got: {device}")
+        input_sha = manifest.get("input_sha256", "")
+        if not (isinstance(input_sha, str) and len(input_sha) == 64 and all(c in "0123456789abcdef" for c in input_sha.lower())):
+            errors.append("manifest input_sha256 is not a valid SHA-256 hex digest")
     except (json.JSONDecodeError, ValueError) as exc:
         errors.append(f"invalid manifest: {exc}")
     return errors
