@@ -1,6 +1,6 @@
 ---
 name: meeting-analyzing
-description: Route video/audio media or transcripts through a four-stage analysis pipeline — transcribe, analyze, domain overlay — with independently invocable stages. Use when the user wants end-to-end processing or needs to enter the pipeline at any intermediate stage.
+description: Route video/audio media or transcripts through a three-stage analysis pipeline (transcribe, analyze, domain overlay) orchestrated by a fourth component, with independently invocable stages. Use when the user wants end-to-end processing or needs to enter the pipeline at any intermediate stage.
 ---
 
 # Meeting Analyzing
@@ -75,6 +75,7 @@ Select the profile from `domain-analyzer/profiles/`, then apply domain-specific 
 **Caller**: another SKILL that produces media or transcripts
 **Interface**: `processing-video-content` reads `references/handoff-contract.md` for stage contracts
 **Trigger**: delegate to `processing-video-content` with media or transcript input
+**Delegates to**: `processing-video-content`
 
 Each stage declares its required inputs and outputs. Downstream stages validate upstream manifests before starting. Recovery resumes from the first invalid or missing stage.
 
@@ -102,7 +103,7 @@ Provider auto-selection: probe → pick best available → auto-tune model/worke
 1. Copy an existing profile: `cp domain-analyzer/profiles/hpe-discover-networking.yaml domain-analyzer/profiles/my-event.yaml`
 2. Fill in `meta`, `corpus`, `tracks`, `sections`, vocabulary lists, and `terminology`
 3. Use it: `domain-analyzer` reads the profile and applies its rules
-4. Validate: `validate_domain_analysis.py --profile domain-analyzer/profiles/my-event.yaml <analysis.md>`
+4. Validate: `python domain-analyzer/scripts/validate_domain_analysis.py --profile domain-analyzer/profiles/my-event.yaml <analysis.md>`
 
 ## Boundaries
 

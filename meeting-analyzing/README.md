@@ -58,4 +58,4 @@ Provider auto-selection: probe → pick best available → auto-tune model/worke
 1. Copy the example profile: `cp domain-analyzer/profiles/hpe-discover-networking.yaml domain-analyzer/profiles/my-event.yaml`
 2. Fill in `meta`, `corpus`, `tracks`, `sections`, vocabulary lists, and `terminology`
 3. Use it: `domain-analyzer` reads the profile and applies its rules
-4. Validate: `validate_domain_analysis.py --profile domain-analyzer/profiles/my-event.yaml <analysis.md>`
+4. Validate: `python domain-analyzer/scripts/validate_domain_analysis.py --profile domain-analyzer/profiles/my-event.yaml <analysis.md>`
