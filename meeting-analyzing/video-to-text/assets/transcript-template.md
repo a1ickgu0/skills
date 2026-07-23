@@ -10,6 +10,7 @@ coverage_end_seconds: 0
 transcription_model: ""
 review_model: ""
 generated_at: "YYYY-MM-DD"
+diarization_model: ""
 ---
 
 # Complete Transcript: TITLE
