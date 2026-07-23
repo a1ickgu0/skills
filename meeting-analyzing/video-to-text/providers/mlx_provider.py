@@ -4,9 +4,26 @@ from __future__ import annotations
 
 import os
 import platform
+import subprocess
 from typing import Any
 
 from .base import AbstractTranscriptionProvider, ProviderCapabilities, TunedConfig
+
+
+def _is_apple_silicon() -> bool:
+    """Return True on Apple Silicon hardware, even when Python runs under Rosetta 2."""
+    if platform.system() != "Darwin":
+        return False
+    result = _run_text(["sysctl", "-n", "hw.optional.arm64"])
+    return result == "1"
+
+
+def _run_text(command: list[str]) -> str | None:
+    try:
+        completed = subprocess.run(command, check=True, capture_output=True, text=True)
+        return completed.stdout.strip()
+    except (OSError, subprocess.CalledProcessError):
+        return None
 
 
 class MLXProvider(AbstractTranscriptionProvider):
@@ -22,7 +39,7 @@ class MLXProvider(AbstractTranscriptionProvider):
             supports_cpu=False,
             platform_restrictions=["darwin-arm64"],
         )
-        if platform.system() != "Darwin" or platform.machine() != "arm64":
+        if not _is_apple_silicon():
             return caps
         try:
             import mlx.core as mx  # type: ignore

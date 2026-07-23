@@ -61,9 +61,19 @@ def gpu_info() -> dict[str, object]:
     return info
 
 
+def _is_apple_silicon() -> bool:
+    """Return True on Apple Silicon hardware, even when Python runs under Rosetta 2."""
+    if platform.system() != "Darwin":
+        return False
+    # sysctl hw.optional.arm64 returns 1 on native arm64 hardware regardless of
+    # whether this process is translated via Rosetta 2.
+    result = run_text(["sysctl", "-n", "hw.optional.arm64"])
+    return result == "1"
+
+
 def probe_metal() -> dict[str, object]:
     result: dict[str, object] = {"available": False}
-    if platform.system() != "Darwin" or platform.machine() != "arm64":
+    if not _is_apple_silicon():
         return result
     try:
         import mlx  # type: ignore # noqa: F401
