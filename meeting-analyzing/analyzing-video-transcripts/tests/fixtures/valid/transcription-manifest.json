@@ -1,0 +1,9 @@
+{
+  "audio_coverage_percent": 100,
+  "device": "fixture",
+  "cpu_workers": 1,
+  "model": "fixture",
+  "review_model": "fixture",
+  "chunks": [],
+  "realtime_factor": 0
+}

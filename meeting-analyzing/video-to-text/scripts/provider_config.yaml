@@ -1,0 +1,30 @@
+# Provider priority and hardware tier configuration for video-to-text transcription.
+# The resolver auto-selects the first available provider from this list.
+provider_priority:
+  - mlx
+  - faster_whisper
+  - cpu
+
+# Hardware tiers determine model selection and concurrency settings.
+# The provider's auto_tune() picks the best tier based on available resources.
+hardware_tiers:
+  high_gpu:       # >= 16 GB VRAM/unified memory
+    model: large-v3
+    review_model: large-v3
+    chunk_seconds: 900
+    overlap_seconds: 5
+  mid_gpu:        # >= 8 GB
+    model: large-v3-turbo
+    review_model: large-v3
+    chunk_seconds: 600
+    overlap_seconds: 5
+  low_gpu:        # >= 4 GB
+    model: medium
+    review_model: large-v3-turbo
+    chunk_seconds: 300
+    overlap_seconds: 5
+  cpu_only:
+    model: small
+    review_model: null
+    chunk_seconds: 300
+    overlap_seconds: 5

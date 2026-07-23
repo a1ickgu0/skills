@@ -1,0 +1,112 @@
+# HPE Discover Networking domain profile
+# All vendor/event-specific configuration extracted from the generic framework.
+
+meta:
+  skill_name: "domain-analyzer-hpe-discover-networking"
+  display_name: "HPE Discover Networking"
+  event_name: "HPE Discover"
+  vendor: "HPE"
+
+corpus:
+  item_id_pattern: "N(?:0[1-9]|1[0-9]|2[0-2])"
+  item_count: 22
+  task1_dir: "networking/01_items"
+  tracks_dir: "networking/02_tracks"
+  analysis_dir: "networking/03_analysis"
+  output_dir_pattern: "networking/05_video_analysis/{item_id}-{slug}"
+
+tracks:
+  - "Self-driving and AI operations"
+  - "Campus and branch"
+  - "Data center"
+  - "WAN"
+  - "Integral security"
+  - "Networks for AI workloads"
+
+sections:
+  - "结论先行"
+  - "视频范围、Task 1 对应关系与证据口径"
+  - "全片时间轴"
+  - "六条研究主线覆盖"
+  - "技术与产品机制"
+  - "平台与组合策略"
+  - "产品、能力与可用性矩阵"
+  - "关键演示及证据边界"
+  - "客户案例与量化主张台账"
+  - "安全与自治治理"
+  - "运营、商业与竞争解读"
+  - "与 Task 1 网页层的增量差异"
+  - "矛盾、不确定性与未回答问题"
+  - "方法、QA 与来源"
+
+availability_vocabulary:
+  - "available-now"
+  - "generally-available"
+  - "announced-no-date"
+  - "coming-in-weeks"
+  - "later-this-year"
+  - "demo-only"
+  - "uncertain"
+
+delta_statuses:
+  - "confirmed"
+  - "expanded"
+  - "contradicted"
+  - "newly-introduced"
+
+evidence_labels:
+  - "speech-only"
+  - "slide-only"
+  - "demo"
+  - "customer-claim"
+  - "official-cross-check"
+  - "analysis-inference"
+  - "uncertain"
+  - "future-looking"
+
+mandatory_extensions:
+  - "technical and product mechanisms"
+  - "platform and portfolio strategy"
+  - "product/capability/availability matrix"
+  - "demonstrations and evidence boundaries"
+  - "customer cases and quantitative-claim ledger"
+  - "security and autonomy governance"
+  - "operating, commercial, and competitive implications"
+  - "explicit delta from Task 1 page layer"
+  - "unanswered questions"
+
+template:
+  frontmatter:
+    item_id: "NXX"
+    analysis_layer: "task2-video"
+    task1_file: "networking/01_items/nxx-slug.md"
+    official_source_url: ""
+    analysis_coverage: "full-video"
+    transcript_file: "transcript.md"
+    transcription_manifest_file: "transcription-manifest.json"
+    analysis_manifest_file: "analysis-manifest.json"
+
+terminology:
+  brands:
+    - "HPE Aruba Networking Central"
+    - "HPE Aruba Networking"
+    - "Juniper Networks"
+    - "Mist AI"
+    - "Marvis AI and Marvis Minis"
+    - "Apstra"
+    - "OpsRamp"
+    - "GreenLake Intelligence"
+  naming_rules:
+    - "Preserve official capitalization"
+    - "Distinguish portfolio, product, feature, and persona names"
+    - "Cross-check spellings against dated official sources"
+    - "Do not assume branding relationships from name proximity alone"
+
+additional_rules:
+  - "Separate what the speaker says from official cross-checks and analyst inference"
+  - "Keep customer production claims separate from demonstrations and hypothetical examples"
+  - "Preserve exact qualifiers, dates, units, denominators, and scope for metrics"
+  - "Compare video against Task 1 explicitly: confirmed, expanded, contradicted, or newly introduced"
+  - "Treat roadmap statements as future-looking; do not convert into current availability"
+  - "Explicitly separate 客户 and 演示/demo claims in analysis"
+  - "Cover all applicable tracks and explicitly mark non-applicable tracks"

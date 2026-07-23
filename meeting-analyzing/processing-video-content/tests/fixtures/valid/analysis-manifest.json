@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-15T00:00:00Z",
+  "inputs": [
+    {"path": "transcript.md", "role": "transcript", "sha256": "2d3b0fd18e62a51802a3658327b80ebd42cae6269f6739e9d6bbe4ba40f2885c"},
+    {"path": "transcription-manifest.json", "role": "transcription-manifest", "sha256": "09fc90606a6627d5fd05e046dbeda9e0510c04fb9cdec79841dec9ef61f71f89"}
+  ],
+  "analytical_lenses": [],
+  "output": {"path": "video-analysis.md", "sha256": "de682b72c69547aa27a81db9346b89095520e29e4a1f6e98e352d51270027b93"}
+}
