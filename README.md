@@ -8,6 +8,7 @@ Claude Code 技能（SKILL）集合仓库——结构化、可复用的分析框
 |------|------|------|
 | **Meeting Analyzing** | [`meeting-analyzing/`](meeting-analyzing/) | 四阶段视频处理流水线：转录 → 通用分析 → 领域覆盖，支持跨平台 GPU/CPU 加速，YAML 驱动领域配置 |
 | **Teece PFI** | [`teece-pfi/`](teece-pfi/) | 基于 Teece (1986) "Profiting from Technological Innovation" 的战略分析框架——评估创新利润分配、整合 vs 契约决策、竞争定位 |
+| **INCOSE Reqs** | [`incose-reqs/`](incose-reqs/) | 使用 INCOSE 方法分析客户材料，提取核心购买要素、利益相关者/系统需求，建立原文证据、验证与追溯链路；输出采用客户本地语言 |
 
 ## 目录约定
 

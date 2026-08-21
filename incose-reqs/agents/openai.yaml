@@ -1,0 +1,4 @@
+interface:
+  display_name: "INCOSE Requirements Analysis"
+  short_description: "Analyze customer material with traceable requirements and verification"
+  default_prompt: "Use INCOSE requirements development to analyze this customer material. Write the output in the customer's local language, separate needs, solutions, evidence, and issues, and produce a traceability matrix."
