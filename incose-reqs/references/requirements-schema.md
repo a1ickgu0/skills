@@ -1,5 +1,9 @@
 # INCOSE Requirements Analysis Output Schema
 
+## -1. Three-dimension key summary — optional, precedes executive close
+
+Produce only when requested. Three sections in fixed order: 客户背景 (customer background), 问题诉求 (pain points / problems), 购买要素 (buying factors). Target 9–12 bullets total, one sentence each. No tables, no IDs, no citation block. Keep the customer's own phrasing for pain points. 购买要素 must express the business essence of why the customer buys (business outcome / risk removed / strategic position) from the customer's perspective, not the products purchased. Do NOT desensitize real output — the sample in SKILL.md is desensitized for the SKILL only.
+
 ## 0. Executive close — first section
 
 Write one standalone paragraph covering scope, output language, core buying factors, key requirements, evidence coverage, unresolved risks, and recommended action. Include at least two original-language quotations with locations.
