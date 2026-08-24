@@ -1,10 +1,27 @@
 # INCOSE Requirements Analysis Output Schema
 
-## -1. Three-dimension key summary — optional, precedes executive close
+## -1. Three-dimension key summary — mandatory first section, precedes the executive close
 
-Produce only when requested. Three sections in fixed order: 客户背景 (customer background), 问题诉求 (pain points / problems), 购买要素 (buying factors). Target 9–12 bullets total, one sentence each. No tables, no IDs, no citation block. Keep the customer's own phrasing for pain points. 购买要素 must express the business essence of why the customer buys (business outcome / risk removed / strategic position) from the customer's perspective, not the products purchased. Do NOT desensitize real output — the sample in SKILL.md is desensitized for the SKILL only.
+Always produce this section; never skip it. Three sections in fixed order: Customer background, Pain points / problems, Buying factors. Target 9–12 bullets total, one sentence each. No tables, no IDs, no citation block. Keep the customer's own phrasing for pain points. Buying factors must express the business essence of why the customer buys (business outcome / risk removed / strategic position) from the customer's perspective, not the products purchased. Do NOT desensitize real output — the sample below is desensitized for the SKILL only.
 
-## 0. Executive close — first section
+### Worked sample (desensitized)
+
+**Customer background:**
+- An upscale hotel in a tourist city, opened in recent years, several dozen rooms; guests are mainly long-stay business travelers and digital nomads with a hard requirement for stable, high-speed network.
+- No dedicated IT staff; network operations long outsourced on a monthly fee, with slow daytime response and next-day handling of nighttime failures.
+- Currently converting the public lounge into a co-working space as a differentiating selling point.
+
+**Pain points:** Current network is gigabit copper + WiFi 5 with one AP serving every two rooms; problems are prominent
+- Uneven room coverage and no corridor APs cause roaming drops; frequent disconnect/reconnect in the lobby under high concurrency
+- Access-switch ports exhausted, no room to expand
+- Operations depend on outsourcing, with slow response
+
+**Buying factors:**
+- Protect guest reputation and revenue: guests complain, post negative reviews, and check out over poor network, directly hitting hotel income
+- Escape passive dependence on outsourced operations: fault response shifts from next-day to controllable and self-managed
+- Pave the way for the differentiating selling point: the co-working space needs a network foundation strong enough for the future guest base
+
+## 0. Executive close — first prose section, after the key summary
 
 Write one standalone paragraph covering scope, output language, core buying factors, key requirements, evidence coverage, unresolved risks, and recommended action. Include at least two original-language quotations with locations.
 

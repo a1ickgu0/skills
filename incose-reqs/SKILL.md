@@ -3,7 +3,7 @@ name: incose-reqs
 description: "Analyze customer proposals, user stories, interview notes, pilot reports, product feedback, and acceptance materials using INCOSE requirements development; derive stakeholder and system requirements, business buying factors, verification methods, traceability, risks, and evidence-backed review conclusions."
 metadata:
   short-description: "INCOSE requirements development and traceability"
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # INCOSE Requirements Engineering
@@ -18,21 +18,21 @@ The SKILL instructions are written in English, but the analysis output must use 
 4. Preserve short original-language quotations exactly, and add a concise translation only when the report language differs from the quotation language.
 5. Do not translate product names, model numbers, identifiers, requirement IDs, URLs, or technical tokens.
 
-The output-language decision must be stated in the opening summary, for example: `Output language: Chinese (customer/source language)`. The Chinese Emoi Hotel sample remains Chinese because its customer report and review context are Chinese.
+The output-language decision must be stated in the opening summary, for example: `Output language: Chinese (customer/source language)`. The worked sample in `references/requirements-schema.md` §-1 is an English rendering of a Chinese-customer case; real output always follows the policy above.
 
-## Opening executive close (must come first)
+## Opening executive close (leads the report body)
 
-The first paragraph must be a standalone, citation-ready executive close covering scope, core business buying factors, key requirements, evidence coverage, unresolved risks, and recommended action. It must not introduce facts absent from the body and must include at least two original-language key quotations with precise locations, formatted as: `"Original quotation" — Source: section/subsection/table`.
+The executive close must be a standalone, citation-ready paragraph covering scope, core business buying factors, key requirements, evidence coverage, unresolved risks, and recommended action. It directly follows the three-dimension key summary. It must not introduce facts absent from the body and must include at least two original-language key quotations with precise locations, formatted as: `"Original quotation" — Source: section/subsection/table`.
 
-## Three-dimension key summary (三维度关键综述)
+## Three-dimension key summary
 
-Optionally produce a concise, scannable three-dimension key summary — a one-screen executive snapshot for sales / presales / decision context. Produce it when the user asks for a summary, snapshot, or brief; otherwise skip it. It may stand alone or precede the full report.
+Always produce a concise, scannable three-dimension key summary — a one-screen executive snapshot for sales / presales / decision context. It is the mandatory first section of every report and precedes the executive close. It may also be produced standalone when the user asks for only a summary, snapshot, or brief.
 
 The three dimensions, in fixed order:
 
-1. **客户背景 (Customer background)** — who the customer is and their operating context: industry/type and scale; key customer segments and their defining need; IT staffing / operating model and its constraint; any strategic initiative that raises the stakes. 2–4 bullets, one fact-cluster per bullet.
-2. **问题诉求 (Pain points / problems)** — the as-is state and gap, made concrete. First state what the current situation IS (existing equipment, current architecture, current operating/outsourcing model, current coverage or performance), then point out the specific problem each condition produces. Do NOT stop at abstract environment parameters (e.g. "high racks, 8m ceiling", "long corridors") — name the concrete pain each produces (coverage holes, roaming drops, port exhaustion, slow response). Describe problems, not solutions. 2–4 bullets.
-3. **购买要素 (Buying factors)** — the business essence of WHY the customer buys, stated from the customer's own business perspective: what business outcome, risk removed, cost avoided, or strategic position the customer is really purchasing — not what products/boxes they bought. Each bullet carries a concrete, checkable fact. 2–4 bullets, ranked by customer value and decision impact. Ban empty rhetoric: no phrases like "这是命脉", "最痛的一环", "重中之重", or any wording that adds emphasis without information — every bullet must state a real business motivation.
+1. **Customer background** — who the customer is and their operating context: industry/type and scale; key customer segments and their defining need; IT staffing / operating model and its constraint; any strategic initiative that raises the stakes. 2–4 bullets, one fact-cluster per bullet.
+2. **Pain points / problems** — the as-is state and gap, made concrete. First state what the current situation IS (existing equipment, current architecture, current operating/outsourcing model, current coverage or performance), then point out the specific problem each condition produces. Do NOT stop at abstract environment parameters (e.g. "high racks, 8m ceiling", "long corridors") — name the concrete pain each produces (coverage holes, roaming drops, port exhaustion, slow response). Describe problems, not solutions. 2–4 bullets.
+3. **Buying factors** — the business essence of WHY the customer buys, stated from the customer's own business perspective: what business outcome, risk removed, cost avoided, or strategic position the customer is really purchasing — not what products/boxes they bought. Each bullet carries a concrete, checkable fact. 2–4 bullets, ranked by customer value and decision impact. Ban empty rhetoric: no phrases like "this is our lifeline", "the most painful link", "the single top priority", or any wording that adds emphasis without information — every bullet must state a real business motivation.
 
 ### Conciseness rules
 
@@ -42,24 +42,7 @@ The three dimensions, in fixed order:
 
 ### Desensitization note
 
-The worked sample below is desensitized (generic terms in place of the real name, model, and price). This applies only to the sample embedded in this SKILL. The real report must preserve customer names, model numbers, prices, and locations exactly as in the source — do not desensitize actual output.
-
-### Worked sample (desensitized)
-
-**客户背景：**
-- 某旅游城市一家近年开业的高端酒店，数十间客房，客群以长住商务与数字游民为主，对稳定高速网络有刚性需求。
-- 无专职 IT，网络运维长期外包（月费制），白天响应慢、夜间故障次日处理。
-- 正将公共休息区改造为共享办公空间，作为差异化卖点。
-
-**问题诉求：** 现网为千兆铜缆 + WiFi 5「一拖二房」，问题突出
-- 房间覆盖不均、走廊无 AP 导致漫游断连，大堂高并发下频繁断线重连
-- 接入交换机端口耗尽，无法扩容
-- 运维依赖外包，响应迟缓
-
-**购买要素：**
-- 保住住客口碑与营收：住客因网络差而投诉、差评、退房，直接影响酒店收入
-- 摆脱对外包运维的被动依赖：故障响应从「次日」变为可掌控、可自运维
-- 为差异化卖点铺路：共享办公空间需要一张撑得起未来客群的网络底盘
+The worked sample in [`references/requirements-schema.md`](references/requirements-schema.md) §-1 is desensitized (generic terms in place of the real name, model, and price); that applies to the sample only. The real report must preserve customer names, model numbers, prices, and locations exactly as in the source — do not desensitize actual output.
 
 ## Purpose and boundaries
 
@@ -121,8 +104,8 @@ Use stable IDs: `BUY-xxx` (business buying factor), `SR-xxx` (stakeholder requir
 
 Follow [`references/requirements-schema.md`](references/requirements-schema.md) in this order:
 
-1. Three-dimension key summary (optional, when requested; if produced, it precedes the executive close);
-2. Executive close (first, always present);
+1. Three-dimension key summary (mandatory first section);
+2. Executive close (always present; first prose section after the key summary);
 3. Scope, sources, evidence levels, and output-language decision;
 4. Customer-business core buying factors;
 5. Stakeholders and role–goal–pain points;
@@ -143,8 +126,8 @@ If the user asks for analysis only, label requirements as `candidate` or `to be 
 Before claiming completion, confirm that the report:
 
 - uses the correct local output language and states the language decision;
-- if a three-dimension key summary is produced: it has exactly three sections in order, stays within ~12 bullets, is traceable to source, and is NOT desensitized;
-- starts with a citation-ready executive close;
+- opens with the mandatory three-dimension key summary: exactly three sections in order, within ~12 bullets, traceable to source, and NOT desensitized;
+- follows it with the citation-ready executive close;
 - includes business buying factors distinct from product models;
 - separates NEED, SOL, VER, ISSUE, and ASSUMP;
 - gives every analytical row/paragraph an original key quotation and location;

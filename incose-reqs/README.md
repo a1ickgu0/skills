@@ -1,23 +1,23 @@
 # INCOSE Reqs
 
-面向客户方案、用户故事、访谈纪要、试点总结和验收材料的 INCOSE 需求工程分析技能。
+An INCOSE requirements-engineering analysis skill for customer proposals, user stories, interview notes, pilot summaries, and acceptance materials.
 
-## 能力
+## Capabilities
 
-- 使用客户本地语言输出分析结果；
-- 在最前面输出“客户背景—问题诉求—购买要素”三维度总结；
-- 从业务角度提取核心购买要素；
-- 区分利益相关者需求、系统需求、方案、验证证据、问题和假设；
-- 建立 ConOps 场景、需求分解和需求—方案—验证追溯矩阵；
-- 为每项分析保留原文关键引文和定位；
-- 完成分析后的原文逐项验证，并输出验证记录。
+- Delivers analysis output in the customer's local language;
+- Always opens with the three-dimension summary of customer background, pain points, and buying factors;
+- Extracts core buying factors from a business perspective;
+- Distinguishes stakeholder requirements, system requirements, solutions, verification evidence, issues, and assumptions;
+- Builds ConOps scenarios, requirement decomposition, and a requirement–solution–verification traceability matrix;
+- Retains an original key quotation and location for every analysis item;
+- Performs item-by-item source validation after analysis and outputs the validation record.
 
-## 入口
+## Entry points
 
-- `SKILL.md`：完整工作流和输出约束；
-- `references/requirements-schema.md`：标准输出结构；
-- `agents/openai.yaml`：界面显示信息和默认提示词。
+- `SKILL.md`: full workflow and output constraints;
+- `references/requirements-schema.md`: standard output structure;
+- `agents/openai.yaml`: interface display information and default prompt.
 
-## 适用范围
+## Applicable scope
 
-适合客户方案评审、售前需求分析、用户故事整理、试点复盘、验收准备和产品改进需求提取。该技能输出的是候选需求和评审依据，不代替客户批准正式需求基线。
+Suited for customer proposal review, presales requirements analysis, user story grooming, pilot retrospectives, acceptance preparation, and product-improvement requirement extraction. The skill outputs candidate requirements and review evidence; it does not replace customer approval of a formal requirements baseline.
