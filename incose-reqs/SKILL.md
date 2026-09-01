@@ -3,7 +3,7 @@ name: incose-reqs
 description: "Analyze customer proposals, user stories, interview notes, pilot reports, product feedback, and acceptance materials using INCOSE requirements development; derive stakeholder and system requirements, business buying factors, verification methods, traceability, risks, and evidence-backed review conclusions."
 metadata:
   short-description: "INCOSE requirements development and traceability"
-  version: "0.3.0"
+  version: "0.3.2"
 ---
 
 # INCOSE Requirements Engineering
@@ -17,8 +17,13 @@ The SKILL instructions are written in English, but the analysis output must use 
 3. If no language is specified, infer it from the dominant source language and customer context; ask only when the choice would materially affect acceptance or review.
 4. Preserve short original-language quotations exactly, and add a concise translation only when the report language differs from the quotation language.
 5. Do not translate product names, model numbers, identifiers, requirement IDs, URLs, or technical tokens.
+6. This policy governs every user-facing part of the deliverable: the three-dimension key summary, executive close, all tables, requirement statements, verification plans, conclusions, and generated filenames.
 
 The output-language decision must be stated in the opening summary, for example: `Output language: Chinese (customer/source language)`. The worked sample in `references/requirements-schema.md` §-1 is an English rendering of a Chinese-customer case; real output always follows the policy above.
+
+## Generated filename convention
+
+When the analysis is saved as a file, the filename must start with the skill-name prefix rendered in the output language (see Output-language policy): `INCOSE 需求工程分析：` for Chinese output, `INCOSE Requirements Engineering Analysis:` for English output, or the equivalent translation for any other output language. Append a concise customer or source-document title and the appropriate extension, for example: `INCOSE 需求工程分析：<customer-or-document-title>.docx` or `INCOSE Requirements Engineering Analysis: <customer-or-document-title>.docx`. Keep the prefix uniform across reports in the same language, including its spacing and colon style (full-width colon for Chinese, half-width for English). Sanitize only characters that are invalid for the target filesystem; do not remove or reorder the prefix, and do not mix languages within it.
 
 ## Opening executive close (leads the report body)
 
@@ -26,19 +31,24 @@ The executive close must be a standalone, citation-ready paragraph covering scop
 
 ## Three-dimension key summary
 
-Always produce a concise, scannable three-dimension key summary — a one-screen executive snapshot for sales / presales / decision context. It is the mandatory first section of every report and precedes the executive close. It may also be produced standalone when the user asks for only a summary, snapshot, or brief.
+Always produce a concise, decision-oriented three-dimension key summary for sales, presales, and customer decision makers. It is the mandatory first section of every report and precedes the executive close. It may also be produced standalone when the user asks for only a summary, snapshot, or brief.
+
+The summary must explain the customer's business situation, not merely restate technical facts. Build each bullet through this chain where evidence permits: **customer/business context → concrete operating scenario → observed problem or change → business impact → customer need or decision implication**. Do not force every bullet to contain every link, but do not leave technical symptoms without explaining whom or what business outcome they affect.
 
 The three dimensions, in fixed order:
 
-1. **Customer background** — who the customer is and their operating context: industry/type and scale; key customer segments and their defining need; IT staffing / operating model and its constraint; any strategic initiative that raises the stakes. 2–4 bullets, one fact-cluster per bullet.
-2. **Pain points / problems** — the as-is state and gap, made concrete. First state what the current situation IS (existing equipment, current architecture, current operating/outsourcing model, current coverage or performance), then point out the specific problem each condition produces. Do NOT stop at abstract environment parameters (e.g. "high racks, 8m ceiling", "long corridors") — name the concrete pain each produces (coverage holes, roaming drops, port exhaustion, slow response). Describe problems, not solutions. 2–4 bullets.
-3. **Buying factors** — the business essence of WHY the customer buys, stated from the customer's own business perspective: what business outcome, risk removed, cost avoided, or strategic position the customer is really purchasing — not what products/boxes they bought. Each bullet carries a concrete, checkable fact. 2–4 bullets, ranked by customer value and decision impact. Ban empty rhetoric: no phrases like "this is our lifeline", "the most painful link", "the single top priority", or any wording that adds emphasis without information — every bullet must state a real business motivation.
+1. **Customer background** — describe the customer's business identity and operating model: what the organization does, which customer segments or users matter, what service or business promise they must deliver, the scale and quantified context that affects demand, how operations are staffed or outsourced, and what current business initiative raises the stakes. Preserve decision-relevant numbers, dates, durations, capacities, locations, and response times. Do not reduce them to vague qualitative terms.
+2. **Business needs** — explain what the customer needs to change in the business or operating experience. Connect concrete current-state conditions to affected users, scenarios, and consequences: for example, an observed service interruption to a customer-facing experience, a capacity limit to an expansion constraint, or a slow support response to operational exposure. State the desired business or operational result. Technical facts may appear as evidence, but the bullet must not stop at a device, topology, or feature description.
+3. **Buying factors** — explain why the customer would buy now and how the customer will judge value. State the business outcome protected or created, the risk/cost avoided or decision pressure, the concrete evidence or metric that makes it material, and any important trade-off or evolution requirement. If a product, architecture, or model is mentioned, present it only as a solution mapping to the buying factor, never as the buying factor itself. Rank only when the source or explicit analysis supports the ranking; otherwise mark priority as to be confirmed.
 
-### Conciseness rules
+### Conciseness and evidence rules
 
-- Target 9–12 bullets total; one sentence per bullet; strip adjectives and repetition.
-- No tables, no requirement IDs, no citation block.
-- Every bullet must be traceable to the source material; keep the customer's own phrasing for pain points, lightly normalized.
+- Use 2–4 compact bullets per dimension when the evidence supports them; do not force a fixed total if doing so would remove a material fact or business causal link.
+- Keep each bullet focused on one business thread. Use a short, information-dense sentence or two short linked clauses rather than a vague slogan.
+- Preserve source quantities exactly, including units, ranges, dates, counts, locations, durations, costs, thresholds, and response times. Never replace a decision-relevant quantity with a qualitative adjective.
+- Every bullet must include an inline source quotation and precise location, for example: `("Original quotation" — Source: Section 2/Table 1)`. If the content is derived or uncertain, label it `Derived` or `To be confirmed` beside the evidence.
+- Do not use a table, requirement ID, or separate citation block in this opening summary. Detailed traceability belongs in later sections.
+- Keep the customer's own wording for pain points and business outcomes where possible. Do not invent complaints, revenue loss, churn, reviews, savings, service levels, or other business consequences that the source does not state; mark them as derived or to be confirmed.
 
 ### Desensitization note
 
@@ -126,7 +136,8 @@ If the user asks for analysis only, label requirements as `candidate` or `to be 
 Before claiming completion, confirm that the report:
 
 - uses the correct local output language and states the language decision;
-- opens with the mandatory three-dimension key summary: exactly three sections in order, within ~12 bullets, traceable to source, and NOT desensitized;
+- uses a filename whose prefix matches the output language (`INCOSE 需求工程分析：` for Chinese, `INCOSE Requirements Engineering Analysis:` for English) whenever a file is generated;
+- opens with the mandatory three-dimension key summary: exactly three sections in order, concise but quantitatively faithful, traceable to source, and NOT desensitized;
 - follows it with the citation-ready executive close;
 - includes business buying factors distinct from product models;
 - separates NEED, SOL, VER, ISSUE, and ASSUMP;
