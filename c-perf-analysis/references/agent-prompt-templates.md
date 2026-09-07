@@ -35,7 +35,7 @@ Report when done in under 150 words.
 
 Placeholders: `{WORKDIR}` session cwd; `{ALLOWED_DIR_*}` from the user-approved scope;
 `{CHECKPOINT_FACTS}` dimension-relevant checkpoint slice; `{OUTPUT_FILE}` e.g.
-`docs/analysis/agent_A_timers.md`; `{ENCODING_WARNING}` emit the warning line
+`docs/analysis/perf_A_timers.md`; `{ENCODING_WARNING}` emit the warning line
 ONLY when the Phase 0 encoding probe (`file -bi` on a few sources) detects a
 non-UTF-8 charset; use this exact wording when emitted: "ENCODING WARNING: files
 may be <charset> encoded — ALWAYS use `grep -a` (text-mode) or searches will

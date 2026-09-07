@@ -2,9 +2,16 @@
 
 ## 1. File naming
 
-- Working agent outputs: `agent_<letter>_<topic>.md` (English, mechanical).
-- Final consolidated report: `NN_performance_analysis.md` following the repo's docs
-  numbering (check existing docs before choosing NN).
+One stem (`perf_`) + one hierarchy key per file: `0` = consolidated overview (总),
+`A`…`Z` = dimension / deep-dive reports (分). ASCII sort order IS the reading
+order — `ls` lists the overview first, then A→E→F… .
+
+- Dimension / deep-dive reports (分): `perf_<letter>_<topic>.md` (English,
+  mechanical) — e.g. `perf_A_timers.md` … `perf_E_critical_path.md`, deep-dives
+  continue `perf_F_<topic>.md`, `perf_G_<topic>.md`.
+- Consolidated overview report (总): `perf_0_overview.md` (user language inside;
+  the filename stays English) — `0` sorts before every letter, and `overview`
+  marks the file's role at a glance.
 - Cloud-delivery filenames: `NN-<Chinese-name>_<English-name>.md` — meaningful, ordered,
   bilingual when the delivery audience is Chinese. Keep the local-language segment only
   when the audience requires it (e.g., `01-性能分析汇总报告_<component>-perf-summary.md`).

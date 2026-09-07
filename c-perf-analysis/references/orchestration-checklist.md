@@ -66,7 +66,7 @@ these rules produce.
 
 ## 4. Cross-validation (Phase 3)
 
-- [ ] **Scope audit**: grep each `agent_*.md` for absolute paths / out-of-scope
+- [ ] **Scope audit**: grep each `perf_<letter>_*.md` for absolute paths / out-of-scope
       directory names. Agents occasionally cite what they read despite instructions.
       Fix (re-run) or annotate before the summary.
 - [ ] **Metric reconciliation**: conflicting numbers between agents (e.g., two
@@ -102,7 +102,7 @@ these rules produce.
 - [ ] **Meaningful remote filenames**: rename on upload/after upload to
       `NN-<Chinese-name>_<English-name>.ext` (or repo convention) — keep the local
       language part only when the delivery audience requires it. Raw agent filenames
-      (`agent_A_timers.md`) are meaningless to stakeholders.
+      (`perf_A_timers.md`) are meaningless to stakeholders.
 - [ ] **Translation consistency**: per-file citation-count parity (source vs
       translated) is the cheap, objective check — verify 1:1 on every file. Plus
       terminology-table enforcement (see glossary.md).
@@ -114,7 +114,7 @@ these rules produce.
 - [ ] **Phase 0 unchanged**: the checkpoint is even more valuable here — it serves as
       your own working memory across a long serial run.
 - [ ] **Execute dimensions A→E one at a time**: reuse the same templates and output
-      contracts; the `agent_<X>.md` files are still written to the output dir.
+      contracts; the `perf_<X>.md` files are still written to the output dir.
 - [ ] **Phase 3 unchanged**: cross-validation and the summary flow are identical.
 - [ ] **Expect ~5× wall-clock**: scope discipline and the evidence contract matter
       MORE, not less — there are no parallel agents to cross-check each other.

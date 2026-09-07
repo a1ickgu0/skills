@@ -82,7 +82,7 @@ Dispatch dimensions A–E **in parallel** (single message, multiple background A
 Prompts are generated from [references/agent-prompt-templates.md](references/agent-prompt-templates.md).
 Each prompt MUST embed, in this order:
 
-1. Role + output file path (`agent_<X>_<topic>.md`, English, tables, ≤400 lines)
+1. Role + output file path (`perf_<X>_<topic>.md`, English, tables, ≤400 lines)
 2. **Scope block**: allowed directories verbatim + "do NOT read anything else; if a
    definition lives outside, note `[external, not read]`"
 3. **Encoding warning**: emitted via the templates' conditional `{ENCODING_WARNING}`
@@ -94,7 +94,10 @@ Each prompt MUST embed, in this order:
 6. Output format contract (sections + tables + severity-with-evidence bottleneck list)
 7. Reporting constraint: reply in under 150 words
 
-Output convention: each agent writes `agent_<letter>_<topic>.md` in the output dir.
+Output convention: each agent writes `perf_<letter>_<topic>.md` in the output dir;
+the consolidated overview will be `perf_0_overview.md` — see
+[references/reporting-standards.md](references/reporting-standards.md) §1 for the
+overview-first sort contract.
 
 ### Dimension board
 
@@ -130,15 +133,15 @@ the summary's `[not analyzed]` list must reference the pending deep-dive explici
 
 ## Phase 3 — Cross-Validation & Summary
 
-1. **Scope check**: for each `agent_*.md`, grep for absolute paths or directory names
+1. **Scope check**: for each `perf_<letter>_*.md`, grep for absolute paths or directory names
    outside the allowed set. Fix or annotate violations.
 2. **Metric reconciliation**: when two agents report different numbers for the same
    quantity (e.g., bytes per entry), do NOT pick a winner — clarify the domain difference
    (what each count includes, which assumptions each makes) and present a reconciled
    range in the summary, citing both derivations.
-3. **Consolidated report** `NN_performance_analysis.md` (numbered to follow repo docs
-   convention; user language) following the structure in
-   [references/reporting-standards.md](references/reporting-standards.md):
+3. **Consolidated report** `perf_0_overview.md` (the `0` sorts it ahead of every
+   dimension report and `overview` marks its role; user language) following the
+   structure in [references/reporting-standards.md](references/reporting-standards.md):
    executive summary → top high-severity bottlenecks → medium → low → deep-dive
    conclusions → ranked improvements (CPU / memory / IO lines) → cross-references →
    uncertainty declaration.
