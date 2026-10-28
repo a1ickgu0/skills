@@ -17,7 +17,7 @@ JSON 是唯一权威数据底稿；CSV 是其派生视图，Markdown 是分析�
 - `evidence`：`id`、`source_id`、`locator`（页码/章节/表格/页面字段）、`excerpt`、`applicability`（适用 SKU、版本和配置）。不能只保留一个系列 URL。
 - `claims`：见下文。一条记录只表达一个产品、一个字段、一个配置下的当前判断。
 - `research_tasks`：见 [未知推进与专家复核](expert-review.md)。
-- `coverage`：`id`、`segment`、`source_ids`、`candidate_product_ids`、`status`（`complete` / `partial` / `blocked`）、`gaps`。未收录或排除的候选另在 `exclusions` 中记录原标识、理由及证据，不能静默丢弃。
+- `coverage`：`id`、`segment`、`source_ids`、`candidate_product_ids`、`status`（`complete` / `partial` / `blocked`）、`gaps`。未收录或排除的候选另在 `exclusions` 中记录原标识、理由及证据。Bundle/服务包装项及其子SKU必须排除，记录 `sku`、`parent_sku`（未知用null）、`reason`、`evidence_ids`，不出现在纳入产品或图的计数中；父关系待核的单列，不按删后缀制造替代硬件SKU。
 - `changes`：新研究可为空；更新时记录 `product_id`、`field`、`old_value`、`new_value`、`reason`、`evidence_ids`，涉及用户值时设置 `origin: "user"`，另记录 `user_resolution`（待决或明确决定），即使新旧采用值相同也记录新证据和冲突。
 
 `revision` 标识一次一致的数据快照。报告、图表和导出在 manifest 中引用相同 `dataset_id` 与 `revision`，更新时重新生成受影响视图。

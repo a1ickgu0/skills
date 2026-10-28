@@ -53,6 +53,14 @@ class PackageTests(unittest.TestCase):
         self.assertTrue(all(item["sku"] in text and item["source_url"].startswith("https://buy.hpe.com/") for item in items))
         self.assertTrue((ROOT / "references/panorama_masked.png").read_bytes().startswith(b"\x89PNG\r\n\x1a\n"))
 
+    def test_scope_excludes_bundles_and_examples_do_not_dictate_style(self):
+        skill = (ROOT / "SKILL.md").read_text()
+        self.assertIn("排除Bundle", skill)
+        self.assertIn("子SKU", skill)
+        self.assertIn("风格/配色不作为模板", skill)
+        rules = (ROOT / "references/reporting-and-feishu.md").read_text()
+        self.assertIn("不得照搬", rules)
+
     def test_historical_csv_remains_input_not_answer(self):
         skill = (ROOT / "SKILL.md").read_text()
         self.assertIn("不是标准答案", skill)
