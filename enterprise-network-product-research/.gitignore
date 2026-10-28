@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+/runs/
+/Aruba-CX交换机-产品级表.csv
+/设计与需求回顾.md
+!tests/
+!tests/fixtures/
+!tests/test_*.py
+!tests/scenarios.md
+!tests/fixtures/research.json
+/tests/validation-results.md
+/sme_panorama*
+/private*/

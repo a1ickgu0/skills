@@ -1,0 +1,22 @@
+{
+  "title": "Aruba CX eight-SKU layout example",
+  "input_date": "2026-10-27",
+  "purpose": "Layout and SKU differentiation example, not authoritative specifications or a complete inventory",
+  "evidence_status": "Selected from Aruba research input; names and values are not all independently reverified. URLs are reference locators, not a claim that their contents were re-read for this illustration.",
+  "lanes": [
+    {"label": "千兆电口 · 固定设备 / 上联能力分化", "items": [
+      {"sku": "R8N87B", "platform": "CX 6000", "lines": ["24×GE + 4×1G SFP · 56 Gbps", "24口PoE / 370 W预算", "1G光口上联 · 固定交换机", "电源与气流细节：本例未展开"], "source_url": "https://buy.hpe.com/us/en/p/r8n87b"},
+      {"sku": "JL677A", "platform": "CX 6100", "lines": ["24×GE + 4×1/10G · 128 Gbps", "24口PoE / 370 W预算", "10G上联 · 速率复用，不累加", "电源与气流细节：本例未展开"], "source_url": "https://buy.hpe.com/us/en/p/jl677a"},
+      {"sku": "S0G95A", "platform": "CX 6300F", "lines": ["48×GE + 4×1/10/25/50G · 496 Gbps", "48口PoE / 740 W预算", "TAA名称明示 · 固定950 W电源", "CPU冲突；50G介质/软件条件需复核"], "source_url": "https://buy.hpe.com/us/en/p/s0g95a"}
+    ]},
+    {"label": "光口平台 · 接口组合与设备能力", "items": [
+      {"sku": "JL624A", "platform": "8325-48Y8C", "lines": ["48×1/10/25G + 8×40/100G", "6.4 Tbps · 6风扇 / 双电源", "FB名称缩写 · AC/DC未标明", "TAA未标明；不据此判定不符合"], "source_url": "https://buy.hpe.com/us/en/p/jl624a"},
+      {"sku": "R9A29A", "platform": "9300-32D", "lines": ["32×100/200/400G + 2×10G", "25.6 Tbps · 6风扇 / 双电源", "前→后气流 · 2×AC", "原生速率与breakout模式分开验证"], "source_url": "https://buy.hpe.com/us/en/p/r9a29a"}
+    ]},
+    {"label": "同能力变体 · 8325P共同底座，突出电源与认证标注", "items": [
+      {"sku": "S0G07A", "platform": "CX 8325P", "lines": ["32×40/100G + 2×1/10G · 6.4 Tbps", "6风扇 · 前→后气流", "2×DC · TAA名称明确标注", "与右侧SKU比较交付差异，不作性能排名"], "source_url": "https://buy.hpe.com/us/en/p/s0g07a"},
+      {"sku": "S0G09A", "platform": "CX 8325P", "lines": ["32×40/100G + 2×1/10G · 6.4 Tbps", "6风扇 · 前→后气流", "2×AC · TAA名称明确标注", "同能力，电源制式不同"], "source_url": "https://buy.hpe.com/us/en/p/s0g09a"},
+      {"sku": "S4A49A", "platform": "CX 8325P", "lines": ["32×40/100G + 2×1/10G · 6.4 Tbps", "6风扇 · 前→后气流", "2×DC · TAA名称未标明", "未标明不是非TAA或硬件差异的证明"], "source_url": "https://buy.hpe.com/us/en/p/s4a49a"}
+    ]}
+  ]
+}

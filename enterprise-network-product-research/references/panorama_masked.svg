@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="814" viewBox="0 0 1320 814" role="img" aria-labelledby="title desc" font-family="Hiragino Sans GB, PingFang SC, Noto Sans CJK SC, sans-serif">
+<title id="title">Aruba CX 产品全景图：八型号布局示例</title>
+<desc id="desc">基于Aruba研究输入的独立示例。按接口形态分层，突出气流、电源和TAA名称标注，不代表完整目录或官方认证结论。</desc>
+<rect width="1320" height="814" fill="#f4f6f9"/>
+<text x="28" y="42" font-size="28" fill="#26324b" font-weight="700">Aruba CX 产品全景图</text>
+<text x="28" y="72" font-size="16" fill="#26324b" font-weight="400">8款研究输入示例 · 按接口能力分层，非部署层级或性能排名 · 非全量官方核验</text>
+<text x="28" y="98" font-size="14" fill="#59677b" font-weight="400">读图：卡片头为SKU/子平台；正文为共同能力；末两行为采购差异与限制。</text>
+<rect x="28" y="120" width="1264" height="202" rx="6" fill="#ffffff"/>
+<rect x="28" y="120" width="1264" height="34" rx="5" fill="#263d59"/>
+<text x="42" y="144" font-size="18" fill="#ffffff" font-weight="700">千兆电口 · 固定设备 / 上联能力分化</text>
+<rect x="40" y="166" width="404" height="144" rx="4" fill="#edf2f7"/>
+<text x="52" y="192" font-size="21" fill="#26324b" font-weight="700">R8N87B</text>
+<text x="278" y="191" font-size="14" fill="#26324b" font-weight="400">CX 6000</text>
+<text x="52" y="219" font-size="15" fill="#26324b" font-weight="400">24×GE + 4×1G SFP · 56 Gbps</text>
+<text x="52" y="244" font-size="15" fill="#26324b" font-weight="400">24口PoE / 370 W预算</text>
+<text x="52" y="269" font-size="14" fill="#26324b" font-weight="700">1G光口上联 · 固定交换机</text>
+<text x="52" y="294" font-size="14" fill="#26324b" font-weight="400">电源与气流细节：本例未展开</text>
+<rect x="460" y="166" width="404" height="144" rx="4" fill="#edf2f7"/>
+<text x="472" y="192" font-size="21" fill="#26324b" font-weight="700">JL677A</text>
+<text x="698" y="191" font-size="14" fill="#26324b" font-weight="400">CX 6100</text>
+<text x="472" y="219" font-size="15" fill="#26324b" font-weight="400">24×GE + 4×1/10G · 128 Gbps</text>
+<text x="472" y="244" font-size="15" fill="#26324b" font-weight="400">24口PoE / 370 W预算</text>
+<text x="472" y="269" font-size="14" fill="#26324b" font-weight="700">10G上联 · 速率复用，不累加</text>
+<text x="472" y="294" font-size="14" fill="#26324b" font-weight="400">电源与气流细节：本例未展开</text>
+<rect x="880" y="166" width="404" height="144" rx="4" fill="#edf2f7"/>
+<text x="892" y="192" font-size="21" fill="#26324b" font-weight="700">S0G95A</text>
+<text x="1118" y="191" font-size="14" fill="#26324b" font-weight="400">CX 6300F</text>
+<text x="892" y="219" font-size="15" fill="#26324b" font-weight="400">48×GE + 4×1/10/25/50G · 496 Gbps</text>
+<text x="892" y="244" font-size="15" fill="#26324b" font-weight="400">48口PoE / 740 W预算</text>
+<text x="892" y="269" font-size="14" fill="#26324b" font-weight="700">TAA名称明示 · 固定950 W电源</text>
+<text x="892" y="294" font-size="14" fill="#26324b" font-weight="400">CPU冲突；50G介质/软件条件需复核</text>
+<rect x="28" y="338" width="1264" height="202" rx="6" fill="#ffffff"/>
+<rect x="28" y="338" width="1264" height="34" rx="5" fill="#263d59"/>
+<text x="42" y="362" font-size="18" fill="#ffffff" font-weight="700">光口平台 · 接口组合与设备能力</text>
+<rect x="40" y="384" width="404" height="144" rx="4" fill="#edf2f7"/>
+<text x="52" y="410" font-size="21" fill="#26324b" font-weight="700">JL624A</text>
+<text x="278" y="409" font-size="14" fill="#26324b" font-weight="400">8325-48Y8C</text>
+<text x="52" y="437" font-size="15" fill="#26324b" font-weight="400">48×1/10/25G + 8×40/100G</text>
+<text x="52" y="462" font-size="15" fill="#26324b" font-weight="400">6.4 Tbps · 6风扇 / 双电源</text>
+<text x="52" y="487" font-size="14" fill="#26324b" font-weight="700">FB名称缩写 · AC/DC未标明</text>
+<text x="52" y="512" font-size="14" fill="#26324b" font-weight="400">TAA未标明；不据此判定不符合</text>
+<rect x="460" y="384" width="404" height="144" rx="4" fill="#edf2f7"/>
+<text x="472" y="410" font-size="21" fill="#26324b" font-weight="700">R9A29A</text>
+<text x="698" y="409" font-size="14" fill="#26324b" font-weight="400">9300-32D</text>
+<text x="472" y="437" font-size="15" fill="#26324b" font-weight="400">32×100/200/400G + 2×10G</text>
+<text x="472" y="462" font-size="15" fill="#26324b" font-weight="400">25.6 Tbps · 6风扇 / 双电源</text>
+<text x="472" y="487" font-size="14" fill="#26324b" font-weight="700">前→后气流 · 2×AC</text>
+<text x="472" y="512" font-size="14" fill="#26324b" font-weight="400">原生速率与breakout模式分开验证</text>
+<rect x="28" y="556" width="1264" height="202" rx="6" fill="#ffffff"/>
+<rect x="28" y="556" width="1264" height="34" rx="5" fill="#263d59"/>
+<text x="42" y="580" font-size="18" fill="#ffffff" font-weight="700">同能力变体 · 8325P共同底座，突出电源与认证标注</text>
+<rect x="40" y="602" width="404" height="144" rx="4" fill="#edf2f7"/>
+<text x="52" y="628" font-size="21" fill="#26324b" font-weight="700">S0G07A</text>
+<text x="278" y="627" font-size="14" fill="#26324b" font-weight="400">CX 8325P</text>
+<text x="52" y="655" font-size="15" fill="#26324b" font-weight="400">32×40/100G + 2×1/10G · 6.4 Tbps</text>
+<text x="52" y="680" font-size="15" fill="#26324b" font-weight="400">6风扇 · 前→后气流</text>
+<text x="52" y="705" font-size="14" fill="#26324b" font-weight="700">2×DC · TAA名称明确标注</text>
+<text x="52" y="730" font-size="14" fill="#26324b" font-weight="400">与右侧SKU比较交付差异，不作性能排名</text>
+<rect x="460" y="602" width="404" height="144" rx="4" fill="#edf2f7"/>
+<text x="472" y="628" font-size="21" fill="#26324b" font-weight="700">S0G09A</text>
+<text x="698" y="627" font-size="14" fill="#26324b" font-weight="400">CX 8325P</text>
+<text x="472" y="655" font-size="15" fill="#26324b" font-weight="400">32×40/100G + 2×1/10G · 6.4 Tbps</text>
+<text x="472" y="680" font-size="15" fill="#26324b" font-weight="400">6风扇 · 前→后气流</text>
+<text x="472" y="705" font-size="14" fill="#26324b" font-weight="700">2×AC · TAA名称明确标注</text>
+<text x="472" y="730" font-size="14" fill="#26324b" font-weight="400">同能力，电源制式不同</text>
+<rect x="880" y="602" width="404" height="144" rx="4" fill="#edf2f7"/>
+<text x="892" y="628" font-size="21" fill="#26324b" font-weight="700">S4A49A</text>
+<text x="1118" y="627" font-size="14" fill="#26324b" font-weight="400">CX 8325P</text>
+<text x="892" y="655" font-size="15" fill="#26324b" font-weight="400">32×40/100G + 2×1/10G · 6.4 Tbps</text>
+<text x="892" y="680" font-size="15" fill="#26324b" font-weight="400">6风扇 · 前→后气流</text>
+<text x="892" y="705" font-size="14" fill="#26324b" font-weight="700">2×DC · TAA名称未标明</text>
+<text x="892" y="730" font-size="14" fill="#26324b" font-weight="400">未标明不是非TAA或硬件差异的证明</text>
+<text x="28" y="794" font-size="13" fill="#59677b" font-weight="400">输入日期2026-10-27 · TAA未标明≠不符合；电源制式未标明不默认AC · 字段依据见panorama-example.json</text>
+</svg>

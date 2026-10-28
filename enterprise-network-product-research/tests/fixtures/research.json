@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "synthetic-example",
+  "revision": "1",
+  "scope": {
+    "vendor": "Example", "category": "switch", "region": "global",
+    "as_of": "2026-10-27", "lifecycle_target": "unknown", "defaults": [], "synthetic": true
+  },
+  "products": [{"id": "example:SW1", "sku": "SW1", "name": "Synthetic switch", "kind": "fixed"}],
+  "configurations": [{"id": "cfg1", "product_id": "example:SW1", "basis": "standard", "description": "No optional uplink module"}],
+  "sources": [{"id": "src1", "url": "https://example.invalid/test-only", "kind": "synthetic", "title": "Synthetic prompt, not vendor evidence", "version": null, "accessed_at": "2026-10-27"}],
+  "evidence": [{"id": "ev1", "source_id": "src1", "locator": "test prompt", "excerpt": "20 independent GE ports and 4 GE Combo groups; no CPU data", "applicability": "SW1 standard, synthetic only"}],
+  "claims": [
+    {"id": "ports", "product_id": "example:SW1", "configuration_id": "cfg1", "field": "concurrent_port_count", "value": 24, "unit": "ports", "value_state": "known", "method": "secondary", "conflict": "none", "evidence_ids": ["ev1"], "importance": "critical", "rationale": "Synthetic test input only, not official confirmation"},
+    {"id": "cpu", "product_id": "example:SW1", "configuration_id": "cfg1", "field": "cpu", "value": null, "unit": null, "value_state": "unknown", "method": "unestablished", "conflict": "none", "evidence_ids": [], "importance": "critical", "rationale": "Checked fixture does not specify CPU"}
+  ],
+  "research_tasks": [{"id": "task-cpu", "claim_id": "cpu", "reason": "not_found_in_checked_sources", "priority": "high", "status": "open", "attempts": [{"action": "Read synthetic prompt", "source_ids": ["src1"], "result": "CPU not specified"}], "hypotheses": [], "next_action": "In a real research task, find the SKU hardware guide", "stop_reason": null}],
+  "coverage": [{"id": "coverage1", "segment": "Synthetic test only", "source_ids": ["src1"], "candidate_product_ids": ["example:SW1"], "status": "partial", "gaps": ["No vendor catalogue checked"]}],
+  "changes": []
+}
